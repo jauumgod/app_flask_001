@@ -52,5 +52,11 @@ def usuarios():
     usuarios = User.query.all()
     return render_template("usuarios.html",users=usuarios)
 
+@app.route("/pagina_inicial")
+def pagina_inicial():
+    postagens={'Joao Marcos':'Hoje vamos começar a fazer um site',
+                'Marcos':'Hoje vamos começar um novo curso'}
+    return render_template("pagina_inicial.html")
+
 if __name__=="__main__":
     app.run(debug=True)

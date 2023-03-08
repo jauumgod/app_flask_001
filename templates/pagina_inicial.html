@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div>
+    <hr>
+    <h2>POSTAGENS</h2>
+    <table>
+        <thead>
+            <th>Numero</th>
+            <th>Usuario</th>
+            <th>Postagem</th>
+        </thead>
+        <tbody>
+            {% for i in postagens %}
+                {{i}}
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
